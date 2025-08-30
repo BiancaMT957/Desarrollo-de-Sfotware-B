@@ -1,7 +1,7 @@
 # Sección 4.1 – DevOps vs Cascada
 
 ## Diagrama comparativo
-![DevOps vs Cascada](../imagenes/devops-vs-cascada.png)
+
 
 El gráfico muestra que:
 - **Cascada** sigue un flujo lineal de fases (Requisitos → Diseño → Implementación → Verificación → Mantenimiento), con retroalimentación tardía.  
