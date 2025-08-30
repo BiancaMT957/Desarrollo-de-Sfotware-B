@@ -1,1 +1,10 @@
 
+DevOps se fundamenta en prácticas que aceleran el ciclo de vida del software, impulsando la automatización, la colaboración y el feedback continuo. Esto se manifiesta en dos prácticas principales: la Integración Continua (CI) y el Despliegue Continuo (CD).
+
+
+Con licencia de Google
+La Integración Continua (CI) es la práctica de fusionar los cambios de código de todos los desarrolladores en un repositorio central de forma frecuente. Esto se logra con pruebas automatizadas cercanas al código, que se ejecutan cada vez que se envía un cambio. Su principal beneficio es detectar errores en lotes pequeños, lo que los hace más fáciles de corregir. Por su parte, el Despliegue Continuo (CD) automatiza el lanzamiento de cambios desde el repositorio a los entornos de producción. La esencia es que cada cambio que pasa las pruebas de la CI puede ser liberado al instante, lo que acelera el tiempo de entrega y reduce el riesgo de fallos.
+
+Una de las principales inspiraciones de DevOps es la filosofía Agile, que se enfoca en la colaboración y la adaptabilidad. Prácticas como las reuniones diarias (daily stand-ups) y las retrospectivas no solo ayudan a los equipos a resolver problemas técnicos, sino que también fomentan la comunicación y la empatía entre los equipos de desarrollo y operaciones. Esto permite que el pipeline de CI/CD evolucione: las retrospectivas, por ejemplo, pueden identificar un punto de fricción en la automatización, lo que lleva a la decisión de agregar una nueva etapa de prueba o una revisión de seguridad, mejorando el proceso continuamente.
+
+Para medir la mejora en la colaboración entre Dev y Ops, se puede usar un indicador como el tiempo promedio desde que se aprueba una solicitud de cambio (Pull Request) hasta que se despliega en un entorno de pruebas. Este indicador se puede recolectar revisando las bitácoras o los metadatos de los Pull Requests y los registros de despliegue en el sistema de control de versiones (por ejemplo, Git) sin necesidad de herramientas pagas. Una disminución en este tiempo es una señal observable y no financiera de que la comunicación y la automatización entre los equipos están mejorando.
