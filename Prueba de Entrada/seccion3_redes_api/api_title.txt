@@ -1,0 +1,3 @@
+sunt aut facere repellat provident occaecati excepturi optio reprehenderit
+
+Encabezado Content-Type: la respuesta de la API es application/json,  el contenido es tipo JSON.

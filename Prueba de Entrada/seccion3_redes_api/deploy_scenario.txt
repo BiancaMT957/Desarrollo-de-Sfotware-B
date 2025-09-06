@@ -1,0 +1,7 @@
+Imagina el proceso de llevar un proyecto de software desde que escribes el código hasta que se ejecuta en un servidor real. Primero, todo el código se guarda en un repositorio usando Git, lo que permite llevar control de cambios y colaborar con otros.
+
+Luego, antes de “subir” los cambios a producción, se ejecutan pruebas automáticas para asegurarnos de que nada se rompa. Por ejemplo, en proyectos Python usamos pytest para validar que cada función haga lo que debe.
+
+Después viene la integración y despliegue continuo (CI/CD). Con herramientas como GitHub Actions, podemos automatizar que cada cambio pase por pruebas y se prepare para el despliegue sin que tengamos que hacerlo manualmente. Finalmente, el código se empaqueta en contenedores usando Docker, y se despliega en un entorno orquestado con Kubernetes. Esto hace que la aplicación sea más fácil de manejar, escalar y mantener.
+
+Este flujo asegura que cada cambio sea revisado, probado y desplegado de manera segura y confiable. Además, si algo falla, podemos retroceder a versiones anteriores sin problemas, manteniendo la estabilidad del sistema.
