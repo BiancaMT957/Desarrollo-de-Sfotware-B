@@ -1,0 +1,7 @@
+*   f3e2c1d (HEAD -> feature/msg, origin/feature/msg) Merge branch 'main' into feature/msg
+|\
+| * 9a8b7c6 (main) hotfix
+* | 7d6e5f4 Add summarize function
+|/
+* 1a2b3c4 Initial commit
+
