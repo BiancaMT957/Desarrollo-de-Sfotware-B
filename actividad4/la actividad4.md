@@ -124,7 +124,8 @@ Estos elementos permiten operaciones eficientes y seguras, reduciendo errores hu
 
 ```
 
-![w](https://github.com/BiancaMT957/Desarrollo-de-Sfotware-B/raw/main/actividad4/image/1.png)
+![E](https://github.com/BiancaMT957/Desarrollo-de-Sfotware-B/raw/main/actividad4/image/1.png)
+
 
 ```
 
