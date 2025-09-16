@@ -122,26 +122,24 @@ Estos elementos permiten operaciones eficientes y seguras, reduciendo errores hu
 1. Navega a `/etc`, lista archivos ocultos y redirige la salida a un archivo en tu home: `cd /etc; ls -a > ~/etc_lista.txt`.
 
 
-```
+
 ![cc](https://github.com/BiancaMT957/Desarrollo-de-Sfotware-B/blob/main/actividad4/image/1.png)
 
-```
+
 
 
 2. Usa globbing para listar todos los archivos en `/tmp` que terminen en `.txt` o `.doc`, y cuenta cuántos hay con una tubería (versión robusta): `find /tmp -maxdepth 1 -type f \( -name '*.txt' -o -name '*.doc' \) | wc -l`.
 
-```
+
 ![gf](https://github.com/BiancaMT957/Desarrollo-de-Sfotware-B/blob/main/actividad4/image/2.png)
-```
+
 
 
 
 
 3. Crea un archivo con `printf "Línea1\nLínea2\n" > test.txt`.
 
-```
-
-```
+![yu](https://github.com/BiancaMT957/Desarrollo-de-Sfotware-B/blob/main/actividad4/image/3.png)
 
 
 #### Comprobación
@@ -199,10 +197,46 @@ Estos permiten configuraciones seguras en pipelines DevSecOps, como rotación de
 Para habilitar systemd: Edita `/etc/wsl.conf` con `sudo nano /etc/wsl.conf` y agrega `[boot]\nsystemd=true`, luego reinicia WSL con `wsl --shutdown` desde PowerShell.
 
 #### Ejercicios de reforzamiento
-1. Crea un usuario "devsec" y agrégalo a un grupo "ops". Cambia permisos de un archivo para que solo "devsec" lo lea: `sudo adduser devsec; sudo addgroup ops; sudo usermod -aG ops devsec; touch secreto.txt; sudo chown devsec:ops secreto.txt; sudo chmod 640 secreto.txt` (usa mock si es entorno compartido).
-2. Lista procesos, encuentra el PID de tu shell (`ps aux | grep bash`), y envía una señal SIGTERM (no lo mates si es crítico).
-3. Verifica el estado de un servicio como "systemd-logind" con `systemctl status systemd-logind`, y ve sus logs con `journalctl -u systemd-logind -n 10`.
-4. (Intermedio) Inicia un proceso en background (`sleep 100 &`), lista con `ps`, y mátalo con `kill`.
+
+1) Crea un usuario "devsec" y agregalo a un grupo "ops". Cambia permisos de un archivo para que solo "devsec" lo lea: sudo adduser devsec; sudo addgroup ops; sudo
+usermod -aG ops devsec; touch secreto.txt; sudo chown devsec:ops secreto.txt; sudo chmod 640 secreto.txt(usa simulacro si es entorno compartido).
+
+![yu](https://github.com/BiancaMT957/Desarrollo-de-Sfotware-B/blob/main/actividad4/image/4.png)
+
+
+
+![yu](https://github.com/BiancaMT957/Desarrollo-de-Sfotware-B/blob/main/actividad4/image/5.png)
+
+
+
+
+2) Lista de procesos, encuentra el PID de tu shell ( ps aux | grep bash), y envía una señal SIGTERM (no lo mates si es crítico).
+
+
+![yu](https://github.com/BiancaMT957/Desarrollo-de-Sfotware-B/blob/main/actividad4/image/6.png)
+
+
+
+
+
+3) Verifique el estado de un servicio como "systemd-logind" con systemctl status systemd-logind, y ve sus logs con journalctl -u systemd-logind -n 10.
+
+
+![yu](https://github.com/BiancaMT957/Desarrollo-de-Sfotware-B/blob/main/actividad4/image/7.png)
+
+
+
+![yu](https://github.com/BiancaMT957/Desarrollo-de-Sfotware-B/blob/main/actividad4/image/8.png)
+
+
+
+
+
+#### Comprobación
+- `namei -l secreto.txt` (verifica permisos y propietario).
+- `id devsec` (confirma grupos).
+
+### Sección 3: Utilida
 
 #### Comprobación
 - `namei -l secreto.txt` (verifica permisos y propietario).
