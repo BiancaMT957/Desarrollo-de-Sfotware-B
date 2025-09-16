@@ -284,12 +284,26 @@ Crea un archivo de prueba: `printf "linea1: dato1\nlinea2: dato2\n" > datos.txt`
 
 #### Ejercicios de reforzamiento
 1. Usa grep para buscar "root" en `/etc/passwd`: `grep root /etc/passwd`.
+
+
+![yu](https://github.com/BiancaMT957/Desarrollo-de-Sfotware-B/blob/main/actividad4/image/21.png)
+  
+
 2. Con sed, sustituye "dato1" por "secreto" en datos.txt: `sed 's/dato1/secreto/' datos.txt > nuevo.txt`.
+
+
+![yu](https://github.com/BiancaMT957/Desarrollo-de-Sfotware-B/blob/main/actividad4/image/22.png)
+
 3. Con awk y cut, extrae usuarios de `/etc/passwd`: `awk -F: '{print $1}' /etc/passwd | sort | uniq`.
+
+
+![yu](https://github.com/BiancaMT957/Desarrollo-de-Sfotware-B/blob/main/actividad4/image/23.png)
+
+
 4. Usa tr para convertir un texto a mayúsculas y tee para guardarlo: `printf "hola\n" | tr 'a-z' 'A-Z' | tee mayus.txt`.
-5. (Intermedio) Encuentra archivos en `/tmp` modificados en los últimos 5 días: `find /tmp -mtime -5 -type f`.
-6. Pipeline completo: `ls /etc | grep conf | sort | tee lista_conf.txt | wc -l`.
-7. (Opcional) Usa tee para auditoría: `grep -Ei 'error|fail' evidencias/sesion.txt | tee evidencias/hallazgos.txt`.
+
+
+![yu](https://github.com/BiancaMT957/Desarrollo-de-Sfotware-B/blob/main/actividad4/image/24.png)
 
 
 #### Comprobación
