@@ -123,9 +123,7 @@ Estos elementos permiten operaciones eficientes y seguras, reduciendo errores hu
 
 
 ```
-
-![E](https://github.com/BiancaMT957/Desarrollo-de-Sfotware-B/raw/main/actividad4/image/1.png)
-
+![cc](https://github.com/BiancaMT957/Desarrollo-de-Sfotware-B/blob/main/actividad4/image/1.png)
 
 ```
 
@@ -133,7 +131,7 @@ Estos elementos permiten operaciones eficientes y seguras, reduciendo errores hu
 2. Usa globbing para listar todos los archivos en `/tmp` que terminen en `.txt` o `.doc`, y cuenta cuántos hay con una tubería (versión robusta): `find /tmp -maxdepth 1 -type f \( -name '*.txt' -o -name '*.doc' \) | wc -l`.
 
 ```
-
+![gf](https://github.com/BiancaMT957/Desarrollo-de-Sfotware-B/blob/main/actividad4/image/2.png)
 ```
 
 
