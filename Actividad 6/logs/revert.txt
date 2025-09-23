@@ -1,0 +1,16 @@
+EJERCICIO 2:
+Bianca@MSI MINGW64 ~/Documents/Actividad6-CC3S2 (develop)
+$ git revert HEAD
+[develop 6413121] Revert "Agrega main.py"
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 main.py
+ 
+Bianca@MSI MINGW64 ~/Documents/Actividad6-CC3S2 (develop)
+$ git log --author=
+commit 64131211fdf9db12c651f78e8069da84244c0f25 (HEAD -> develop)
+Author: BiancaMT957 <merchantorresbianca75@gmail.com>
+Date:   Tue Sep 23 16:35:06 2025 -0400
+
+    Revert "Agrega main.py"
+    
+    This reverts commit 614770c6118effd0b40f77b472aa1053d22ca6fa.

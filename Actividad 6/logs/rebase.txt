@@ -1,0 +1,7 @@
+Bianca@MSI MINGW64 ~/Documents/Actividad6-CC3S2 (develop)
+$ git rebase -i HEAD~3
+[detached HEAD f27e121] Configura la documentación base del repositorio
+ Date: Tue Sep 23 15:40:13 2025 -0400
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 CONTRIBUTING.md
+Successfully rebased and updated refs/heads/develop.

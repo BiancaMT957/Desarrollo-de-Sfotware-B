@@ -1,0 +1,34 @@
+EERCICIO 1:
+Bianca@MSI MINGW64 ~/Documents/Actividad6-CC3S2 (main)
+$ git merge feature/advanced-feature
+Auto-merging main.py
+CONFLICT (content): Merge conflict in main.py
+CONFLICT (content): Merge conflict in main.py
+Automatic merge failed; fix conflicts and then commit the result.
+Bianca@MSI MINGW64 ~/Documents/Actividad6-CC3S2 (main|MERGING)
+$  git add main.py
+
+Bianca@MSI MINGW64 ~/Documents/Actividad6-CC3S2 (main|MERGING)
+$ git commit -m "Resuelve el conflicto de fusión entre la versión main y feature/advanced-feature"
+[main 163558f] Resuelve el conflicto de fusión entre la versión main y feature/advanced-feature
+
+Bianca@MSI MINGW64 ~/Documents/Actividad6-CC3S2 (main)
+$ git branch -d feature/advanced-feature
+Deleted branch feature/advanced-feature (was 838f9ec).
+
+EJERCICIO 3:
+
+Bianca@MSI MINGW64 ~/Documents/Actividad6-CC3S2 (main)
+$ git merge bugfix/rollback-feature
+Auto-merging main.py
+CONFLICT (add/add): Merge conflict in main.py
+Automatic merge failed; fix conflicts and then commit the result.
+
+Bianca@MSI MINGW64 ~/Documents/Actividad6-CC3S2 (main|MERGING)
+$ git add main.py
+
+Bianca@MSI MINGW64 ~/Documents/Actividad6-CC3S2 (main|MERGING)
+$ git commit -m"Arregle problemas de fusion"
+[main b574349] Arregle problemas de fusion
+
+Bianca@MSI MINGW64 ~/Documents/Actividad6-CC3S2 (main)

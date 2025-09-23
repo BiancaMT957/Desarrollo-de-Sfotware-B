@@ -1,0 +1,8 @@
+Bianca@MSI MINGW64 ~/Documents/Actividad6-CC3S2
+$ git init
+Initialized empty Git repository in C:/Users/Bianca/Documents/Actividad6-CC3S2/.git/
+
+Bianca@MSI MINGW64 ~/Documents/Actividad6-CC3S2
+$ git status
+On branch main
+nothing to commit, working tree clean

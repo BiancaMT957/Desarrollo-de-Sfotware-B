@@ -1,0 +1,35 @@
+Bianca@MSI MINGW64 ~/Documents/Actividad6-CC3S2 (main)
+$ git log --oneline
+614770c (HEAD -> main) Agrega main.py
+8fb2ba5 Configura la documentación base del repositorio
+6d26b10 Commit inicial con README.md
+
+
+EJERCICIO 2:
+$ git log --graph --oneline --all
+* f27e121 (HEAD -> develop) Configura la documentación base del repositorio
+| *   163558f (main) Resuelve el conflicto de fusión entre la versión main y feature/advanced-feature
+| |\  
+| | * 838f9ec Agrega la funcion greet como función avanzada
+| * | bcebde3 Actualizar el mensaje main.py en la rama main
+| |/  
+| * 614770c (feature/new-feature, feature/login, feature/another-new-feature, feature-login) Agrega main.py
+| * 8fb2ba5 (hotfix/bugfix, bugfix-old) Configura la documentación base del repositorio
+|/
+* 6d26b10 Commit inicial con README.md
+
+EJERCICIO 3:
+Bianca@MSI MINGW64 ~/Documents/Actividad6-CC3S2 (main)
+$ git log --graph --oneline
+*   b574349 (HEAD -> main) Arregle problemas de fusion
+|\
+| * 2ec11cf (bugfix/rollback-feature) Corregir error en la funcionalidad de rollback
+* |   163558f Resuelve el conflicto de fusión entre la versión main y feature/advanced-feature
+|\ \
+| * | 838f9ec Agrega la funcion greet como función avanzada
+* | | bcebde3 Actualizar el mensaje main.py en la rama main
+|/ /
+* | 614770c (feature/new-feature, feature/login, feature/another-new-feature, feature-login) Agrega main.py
+* | 8fb2ba5 (hotfix/bugfix, bugfix-old) Configura la documentación base del repositorio
+:
+*   b574349 (HEAD -> main) Arregle problemas de fusion

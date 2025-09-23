@@ -1,0 +1,25 @@
+
+Bianca@MSI MINGW64 ~/Documents/Actividad6-CC3S2 (main)
+$ git branch -vv
+  bugfix-old                  8fb2ba5 Configura la documentación base del repositorio
+  develop                     614770c Agrega main.py
+  feature-login               614770c Agrega main.py
+  feature/another-new-feature 614770c Agrega main.py
+  feature/login               614770c Agrega main.py
+  feature/new-feature         614770c Agrega main.py
+  hotfix/bugfix               8fb2ba5 Configura la documentación base del repositorio
+* main                        614770c Agrega main.py
+:
+
+Al final de la actividad:
+Bianca@MSI MINGW64 ~/Documents/Actividad6-CC3S2 (feature/cherry-pick)
+$ git branch
+  bugfix-old
+  develop
+  feature-login
+  feature/another-new-feature
+* feature/cherry-pick
+  feature/login
+  feature/new-feature
+  hotfix/bugfix
+  main

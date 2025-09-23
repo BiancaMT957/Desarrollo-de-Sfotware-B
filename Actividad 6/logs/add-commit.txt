@@ -1,0 +1,9 @@
+PRIMER COMMIT:
+Bianca@MSI MINGW64 ~/Documents/Actividad6-CC3S2 (main)
+$ git add README.md
+
+Bianca@MSI MINGW64 ~/Documents/Actividad6-CC3S2 (main)
+$ git commit -m"Commit inicial con README.md"
+[master (root-commit) 6d26b10] Commit inicial con README.md
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
