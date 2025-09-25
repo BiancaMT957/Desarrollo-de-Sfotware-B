@@ -1,0 +1,3 @@
+- Shellcheck reportó problemas de quoting y variables no citadas.
+- Shfmt aplicó formato estándar.
+- Ruff no estaba instalado, por lo que se omitió lint de Python.
