@@ -1,0 +1,2 @@
+Considerando el archivo objetivo 'out/hello.txt'
+Debe rehacer el objetivo porque no existe
