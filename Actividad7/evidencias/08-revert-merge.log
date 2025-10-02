@@ -1,0 +1,9 @@
+Bianca@MSI MINGW64 ~/Documents/Actividad7/no-ff (main)        
+$ git show -s --format=%P HEAD
+b3b3c01d1e8001e4986d89ea957557f2dbb22f42 459639dbd45e29307de8ebba1ce5ad25717c0d79
+
+Bianca@MSI MINGW64 ~/Documents/Actividad7/no-ff (main)        
+$ git revert -m 1 HEAD
+[main 48f120f] Revert "Merge branch 'add-feature'"
+ 1 file changed, 2 deletions(-)
+ delete mode 100644 archivo.txt

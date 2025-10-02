@@ -1,0 +1,84 @@
+Bianca@MSI MINGW64 ~/Documents/Actividad7/squash
+$ git init -b main
+Initialized empty Git repository in C:/Users/Bianca/Documents/Actividad7/squash/.git/
+
+Bianca@MSI MINGW64 ~/Documents/Actividad7/squash (main)       
+$ echo "Inicio del proyecto Squash" > README.md
+
+Bianca@MSI MINGW64 ~/Documents/Actividad7/squash (main)       
+$ git add README.md
+
+Bianca@MSI MINGW64 ~/Documents/Actividad7/squash (main)       
+$ git commit -m "Commit inicial"
+[main (root-commit) 5de14b0] Commit inicial
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+Bianca@MSI MINGW64 ~/Documents/Actividad7/squash (main)       
+$ git checkout -b feature-3
+Switched to a new branch 'feature-3'
+
+Bianca@MSI MINGW64 ~/Documents/Actividad7/squash (feature-3)  
+$ echo "Cambio 1" >> archivo.txt
+
+Bianca@MSI MINGW64 ~/Documents/Actividad7/squash (feature-3)  
+$ git add archivo.txt
+
+Bianca@MSI MINGW64 ~/Documents/Actividad7/squash (feature-3)  
+$ git commit -m "Primer commit de feature-3"
+[feature-3 0559027] Primer commit de feature-3
+ 1 file changed, 1 insertion(+)
+ create mode 100644 archivo.txt
+
+Bianca@MSI MINGW64 ~/Documents/Actividad7/squash (feature-3)  
+$ echo "Cambio 2" >> archivo.txt
+
+Bianca@MSI MINGW64 ~/Documents/Actividad7/squash (feature-3)  
+$ git add archivo.txt
+
+Bianca@MSI MINGW64 ~/Documents/Actividad7/squash (feature-3)  
+$ git commit -m "Segundo commit de feature-3"
+[feature-3 a58e979] Segundo commit de feature-3
+ 1 file changed, 1 insertion(+)
+
+Bianca@MSI MINGW64 ~/Documents/Actividad7/squash (feature-3)  
+$ echo "Cambio 3" >> archivo.txt
+
+Bianca@MSI MINGW64 ~/Documents/Actividad7/squash (feature-3)  
+$ git add archivo.txt
+
+Bianca@MSI MINGW64 ~/Documents/Actividad7/squash (feature-3)  
+$ git commit -m "Tercer commit de feature-3"
+[feature-3 565aa7f] Tercer commit de feature-3
+ 1 file changed, 1 insertion(+)
+
+Bianca@MSI MINGW64 ~/Documents/Actividad7/squash (feature-3)  
+$ git checkout main
+Switched to branch 'main'
+
+Bianca@MSI MINGW64 ~/Documents/Actividad7/squash (main)       
+$ git merge --squash feature-3
+Updating 5de14b0..565aa7f
+Fast-forward
+Squash commit -- not updating HEAD
+ archivo.txt | 3 +++
+ 1 file changed, 3 insertions(+)
+ create mode 100644 archivo.txt
+
+Bianca@MSI MINGW64 ~/Documents/Actividad7/squash (main)       
+$ git add -A
+
+Bianca@MSI MINGW64 ~/Documents/Actividad7/squash (main)       
+$ git commit -m "Squash de feature-3: documentación estándar"
+[main 008ac3b] Squash de feature-3: documentación estándar
+ 1 file changed, 3 insertions(+)
+ create mode 100644 archivo.txt
+
+Bianca@MSI MINGW64 ~/Documents/Actividad7/squash (main)       
+$ git log --graph --oneline --decorate --all 
+* 008ac3b (HEAD -> main) Squash de feature-3: documentación estándar
+| * 565aa7f (feature-3) Tercer commit de feature-3
+| * a58e979 Segundo commit de feature-3
+| * 0559027 Primer commit de feature-3
+|/
+* 5de14b0 Commit inicial
