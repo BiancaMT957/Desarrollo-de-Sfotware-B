@@ -1,0 +1,7 @@
+Bianca@MSI MINGW64 ~/Documents/Actividad7/strategy (main)
+$ git log --graph --oneline --decorate --all
+*   9f8e7d6 (HEAD -> main) Merge branch 'feature-x' -X ours
+|\
+| * f9c350a Commit 1 feature-x
+| * 2b3c4d5 Commit 2 feature-x
+* | 890b8b3 Commit inicial

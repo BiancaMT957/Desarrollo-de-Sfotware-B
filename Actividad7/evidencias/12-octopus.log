@@ -1,0 +1,8 @@
+Bianca@MSI MINGW64 ~/Documents/Actividad7/octopus (main)   
+$ git log --graph --oneline --merges --decorate 
+*   9abc123 (HEAD -> main) Merge branches 'feat-a' 'feat-b'
+|\
+| * 0a09f50 Commit 1 feat-b
+|/
+* | 4d5e6f7 Commit 1 feat-a
+* 890b8b3 Commit inicial

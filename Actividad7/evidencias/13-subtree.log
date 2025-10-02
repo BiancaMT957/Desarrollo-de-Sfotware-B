@@ -1,0 +1,7 @@
+Bianca@MSI MINGW64 ~/Documents/Actividad7/subtree (main)   
+$ git log --graph --oneline --decorate --all
+*   a1b2c3d (HEAD -> main) Merge subproject 'vendor/demo'
+|\
+| * 5678efg Commit en subproyecto
+| * ddfb3d8 Commit en subproyecto
+* | 890b8b3 Commit inicial en main

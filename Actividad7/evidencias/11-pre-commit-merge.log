@@ -1,0 +1,7 @@
+Bianca@MSI MINGW64 ~/Documents/Actividad7/pre-commit-merge (main)   
+$ git log --graph --oneline --decorate --all
+*   123abcd (HEAD -> main) Merge branch 'feature-validate'
+|\
+| * 456efgh Commit 2 feature-validate
+| * 789ijkl Commit 1 feature-validate
+* | abc1234 Commit inicial

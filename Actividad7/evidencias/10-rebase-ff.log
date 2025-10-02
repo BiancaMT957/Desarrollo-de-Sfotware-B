@@ -1,0 +1,7 @@
+Bianca@MSI MINGW64 ~/Documents/Actividad7/no-ff (main)   
+$ git log --graph --oneline --decorate --all --first-parent
+* ddfb3d8 (HEAD -> main, feature-rebase) Commit 3 feature-rebase
+* ef80c55 Commit 2 feature-rebase
+* 0a09f50 Commit 1 feature-rebase
+* 0b19d12 Commit extra en main
+* f9c350a Commit inicial

@@ -1,0 +1,17 @@
+
+
+Bianca@MSI MINGW64 ~/Documents/Actividad7/no-ff (main)        
+$ git merge --no-ff add-feature
+Merge made by the 'ort' strategy.
+ archivo.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 archivo.txt
+
+Bianca@MSI MINGW64 ~/Documents/Actividad7/no-ff (main)        
+$ git log --graph --oneline --decorate --all
+*   5b9f0c2 (HEAD -> main) Merge branch 'add-feature'
+|\
+| * 459639d (add-feature) Segundo commit de feature
+| * dab76b8 Primer commit de feature
+|/
+* b3b3c01 Commit inicial
