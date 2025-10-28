@@ -1,0 +1,20 @@
+=== Test: Singleton Configuration Reset ===
+Instanciando ConfigSingleton por primera vez...
+ID instancia inicial: 140482939494768
+Entorno actual: dev
+Configuración: {'db_url': 'localhost', 'cache_enabled': True}
+Creado en: 2025-10-28T13:21:45.491239
+
+Intentando crear otra instancia (debería ser la misma)...
+ID instancia nueva: 140482939494768
+¿Misma instancia? True
+
+Probando método reset()...
+Configuración antes del reset: {'db_url': 'localhost', 'cache_enabled': True}
+Reiniciando configuración...
+Configuración después del reset: {}
+
+Verificación:
+ Singleton mantiene la misma referencia.
+ Configuración correctamente reiniciada.
+ Prueba finalizada sin errores.

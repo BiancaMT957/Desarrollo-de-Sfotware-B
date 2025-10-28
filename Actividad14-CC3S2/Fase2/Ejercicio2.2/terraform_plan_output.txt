@@ -1,0 +1,24 @@
+Terraform Plan Simulation — NullResourceFactory
+------------------------------------------------
+Factory utilizada: TimestampedNullResourceFactory
+
+Generando recursos:
+  - null_resource.null_1
+  - null_resource.null_2
+  - null_resource.null_3
+
+Detalles:
+{
+  "null_1": {"name": "null_1", "timestamp": "2025-10-28T13:22:10.501Z"},
+  "null_2": {"name": "null_2", "timestamp": "2025-10-28T13:22:10.502Z"},
+  "null_3": {"name": "null_3", "timestamp": "2025-10-28T13:22:10.503Z"}
+}
+
+Plan:
+  + create null_resource.null_1
+  + create null_resource.null_2
+  + create null_resource.null_3
+
+Summary:
+Plan: 3 to add, 0 to change, 0 to destroy
+Plan generado con éxito.

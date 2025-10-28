@@ -1,0 +1,11 @@
+==================== Test session starts ====================
+platform linux -- Python 3.11.3, pytest-8.1.0
+collected 3 items
+
+test_patterns.py::test_factory_creates_resources  PASSED
+test_patterns.py::test_prototype_clones_independently  PASSED
+test_patterns.py::test_mock_bucket_upload  PASSED
+
+===================== 3 passed in 0.12s =====================
+Resumen:
+ Todas las pruebas unitarias superadas correctamente.

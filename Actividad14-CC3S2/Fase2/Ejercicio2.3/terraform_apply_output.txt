@@ -1,0 +1,23 @@
+Terraform Apply Simulation — CompositeModule
+---------------------------------------------
+Inicializando módulo compuesto "infra_base"...
+
+Clonando recursos base:
+  - null_template_1 -> applied
+  - null_template_2 -> applied
+
+Estructura generada:
+{
+  "module": "infra_base",
+  "resources": [
+    {"type": "null_resource", "name": "null_template_1_clone"},
+    {"type": "null_resource", "name": "null_template_2_clone"}
+  ]
+}
+
+Exportando infraestructura a "infra_output.json"...
+Archivo exportado correctamente.
+
+Apply complete!
+Resources: 2 added, 0 changed, 0 destroyed
+ Infraestructura simulada creada con éxito.

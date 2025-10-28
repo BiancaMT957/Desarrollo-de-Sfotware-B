@@ -1,0 +1,51 @@
+@startuml
+title UML — Patrones para módulos de infraestructura
+
+class SingletonMeta {
+  - _instances: dict
+  - _lock: threading.Lock
+  + __call__(*args, **kwargs)
+}
+
+class ConfigSingleton {
+  - env_name: str
+  - settings: dict
+  - created_at: str
+  + reset()
+}
+
+SingletonMeta <|-- ConfigSingleton
+
+class NullResourceFactory {
+  + create(name: str, triggers: dict=None) : dict
+}
+
+class TimestampedNullResourceFactory {
+  + create(name: str, fmt: str) : dict
+}
+
+NullResourceFactory <|-- TimestampedNullResourceFactory
+
+class ResourcePrototype {
+  - template: dict
+  + clone(mutator: callable) : dict
+}
+
+class CompositeModule {
+  - children: List[Dict]
+  + add(block: Dict)
+  + export() : Dict
+}
+
+class InfrastructureBuilder {
+  - module: CompositeModule
+  + build_null_fleet(count: int)
+  + build_group(name: str, size: int)
+  + export(path: str)
+}
+
+NullResourceFactory -> ResourcePrototype : provides template
+ResourcePrototype -> CompositeModule : clones added
+CompositeModule -> InfrastructureBuilder : used by
+
+@enduml

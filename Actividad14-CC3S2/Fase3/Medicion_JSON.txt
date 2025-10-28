@@ -1,0 +1,11 @@
+Medición del tamaño del JSON exportado desde MockBucketAdapter
+--------------------------------------------------------------
+
+Caso 1 — 15 recursos simulados:
+Tamaño archivo: 5.4 KB
+
+Caso 2 — 150 recursos simulados:
+Tamaño archivo: 51.8 KB
+
+Proporción de crecimiento ≈ 9.6x
+Observación: el tamaño crece linealmente con el número de recursos.
