@@ -1,0 +1,24 @@
+{
+  "variable": {
+    "network": {
+      "type": "string",
+      "default": "lab-net",
+      "description": "Red usada por app1"
+    },
+    "name": {
+      "type": "string",
+      "default": "app1",
+      "description": "Nombre de la instancia"
+    },
+    "port": {
+      "type": "number",
+      "default": 8080,
+      "description": "Puerto de la app"
+    },
+    "api_key": {
+      "type": "string",
+      "default": "",
+      "description": "API key (leer desde entorno / secure.json)"
+    }
+  }
+}
