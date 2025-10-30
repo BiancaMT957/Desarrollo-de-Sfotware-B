@@ -1,25 +1,31 @@
 {
-  "variable": {
-    "network": {
-      "type": "string",
-      "description": "Nombre de la red local",
-      "default": "lab-net"
-    },
-    "name": {
-      "type": "string",
-      "description": "Nombre del servidor",
-      "default": "app"
-    },
-    "port": {
-      "type": "number",
-      "description": "Puerto de la aplicación",
-      "default": 8080
-    },
-    "api_key": {
-      "type": "string",
-      "description": "Clave API (sensitive - no versionar)",
-      "sensitive": true,
-      "default": ""
-    }
-  }
+    "variable": [
+        {
+            "name": [
+                {
+                    "type": "string",
+                    "default": "nuevo-nombre",
+                    "description": "Nueva descripción"
+                }
+            ]
+        },
+        {
+            "network": [
+                {
+                    "type": "string",
+                    "default": "local-network",
+                    "description": "Nombre de la red local"
+                }
+            ]
+        },
+        {
+            "port": [
+                {
+                    "type": "number",
+                    "default": 8080,
+                    "description": "Nueva variable puerto"
+                }
+            ]
+        }
+    ]
 }
