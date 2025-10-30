@@ -1,20 +1,26 @@
 {
-  "resource": {
-    "null_resource": {
-      "local_server": {
-        "triggers": {
-          "name": "${var.name}",
-          "network": "${var.network}",
-          "port": "${var.port}"
-        },
-        "provisioner": [
-          {
-            "local-exec": {
-              "command": "echo 'Starting ${var.name} on port ${var.port} in network ${var.network}'"
+  "resource": [
+    {
+      "null_resource": [
+        {
+          "local_server": [
+            {
+              "triggers": {
+                "name": "${var.name}",
+                "network": "${var.network}",
+                "port": "${var.port}"
+              },
+              "provisioner": [
+                {
+                  "local-exec": {
+                    "command": "echo 'Arrancando servidor ${var.name} en red ${var.network} con puerto ${var.port}'"
+                  }
+                }
+              ]
             }
-          }
-        ]
-      }
+          ]
+        }
+      ]
     }
-  }
+  ]
 }
