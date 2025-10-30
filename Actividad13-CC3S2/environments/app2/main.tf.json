@@ -1,20 +1,26 @@
 {
-  "resource": {
-    "null_resource": {
-      "local_server": {
-        "triggers": {
-          "name": "${var.name}",
-          "network": "${var.network}",
-          "port": "${var.port}"
-        },
-        "provisioner": [
-          {
-            "local-exec": {
-              "command": "echo 'Starting ${var.name} on port ${var.port} in network ${var.network}'"
-            }
-          }
-        ]
-      }
-    }
-  }
+    "resource": [
+        {
+            "null_resource": [
+                {
+                    "local_server": [
+                        {
+                            "provisioner": [
+                                {
+                                    "local-exec": {
+                                        "command": "echo 'Arrancando servidor app2 en red net2 en puerto 8082'"
+                                    }
+                                }
+                            ],
+                            "triggers": {
+                                "name": "app2",
+                                "network": "net2",
+                                "port": 8082
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }
