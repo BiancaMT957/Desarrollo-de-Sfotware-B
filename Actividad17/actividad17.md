@@ -1,5 +1,4 @@
-# Ejercicios obligatorios
-
+# Entregable
 
 ## Ejercicio 1 — Estrategia de "pruebas unitarias" y "pruebas de contrato" combinadas
 
