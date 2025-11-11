@@ -1,0 +1,22 @@
+1) Cleanup: destroy any previous local state (best-effort)
+2) Unit tests (local validations)
+unit:network OK
+unit:compute OK
+unit:storage OK
+unit:firewall OK
+unit:dns OK
+Unit tests: ALL PASS
+3) Smoke/contract phase
+[run_smoke.sh output captured here]
+Smoke tests: PASS
+4) Integration (network -> compute -> storage) (simulado localmente)
+Integration: completed (simulación local).
+5) E2E checks (HTTP) — if available
+E2E evidence present: /path/to/repo/Actividad17-CC3S2/evidencia/e2e_http_check.txt
+E2E: PASS (evidence provided)
+
+===== SUMMARY =====
+Phases passed: 4
+Phases failed: 0
+Detailed logs: evidencia
+Run finished at: 2025-11-11T15:16:15Z

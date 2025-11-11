@@ -1,0 +1,27 @@
+{
+  "format_version": "0.1",
+  "planned_values": {
+    "root_module": {
+      "resources": [
+        {
+          "address": "local_resource.vpc",
+          "type": "local_resource",
+          "name": "vpc",
+          "values": {
+            "cidr": "10.0.0.0/16",
+            "id": "local-vpc-10.0.0.0-16"
+          }
+        },
+        {
+          "address": "local_resource.public_subnets",
+          "type": "local_resource",
+          "name": "public_subnets",
+          "values": [
+            { "id": "pub-0-10.0.1.0/24", "cidr": "10.0.1.0/24", "az": "az1" }
+          ]
+        }
+      ]
+    }
+  },
+  "resource_changes": []
+}

@@ -1,0 +1,27 @@
+Starting smoke tests for modules: network compute storage firewall dns
+---- Module: network ----
+fmt: OK
+validate: OK
+plan: OK
+plan show: OK
+---- Module: compute ----
+fmt: OK
+validate: OK
+plan: OK
+plan show: OK
+---- Module: storage ----
+fmt: OK
+validate: OK
+plan: OK
+plan show: OK
+---- Module: firewall ----
+fmt: OK
+validate: OK
+plan: OK
+plan show: OK
+---- Module: dns ----
+fmt: OK
+validate: OK
+plan: OK
+plan show: OK
+Smoke tests completed in 7s — Passed: 5, Failed: 0
