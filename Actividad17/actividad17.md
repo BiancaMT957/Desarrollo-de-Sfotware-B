@@ -1,6 +1,5 @@
-# Ejercicios obligatorios (respuestas)
+# Ejercicios obligatorios
 
-A continuación se presentan las respuestas a los ejercicios obligatorios listados en la actividad.
 
 ## Ejercicio 1 — Estrategia de "pruebas unitarias" y "pruebas de contrato" combinadas
 
@@ -32,7 +31,7 @@ A continuación se presentan las respuestas a los ejercicios obligatorios listad
      - Outputs que representan colecciones usar prefijo plural (e.g., public_subnets).
      - Estandarizar objetos: cada subnet debe tener { id, cidr, az } si aplica.
      - Documentar tipos en `outputs.tf` y en README del módulo.
-   - Beneficio: los contract tests verifican la presencia, tipo y shape de estos outputs sin necesidad de recursos reales.
+   - Beneficio: los contract tests van a verificar la presencia, tipo y shape de estos outputs sin +estar necesitando de recursos reales.
 
 2. Casos límite sin recursos externos
    - Escenarios de inputs inválidos a detectar:
@@ -91,7 +90,7 @@ A continuación se presentan las respuestas a los ejercicios obligatorios listad
 
 ## Ejercicio 3.7 — Pruebas de humo locales ultrarrápidos
 
-- Tres comandos rápidos por módulo:
+- Aca hay 3 comandos rápidos por módulo:
   1. `terraform fmt -check` — asegura estilo y evita cambios triviales que rompan diffs.
   2. `terraform validate` — valida sintaxis y comprobaciones estáticas.
   3. `terraform plan -refresh=false -input=false` — genera plan sin tocar estados remotos, detecta errores semánticos inmediatos.
@@ -146,7 +145,7 @@ A continuación se presentan las respuestas a los ejercicios obligatorios listad
 
 ## Ejercicio 6.18 — Automatización local de la suite (run_all.sh)
 
-- Plan:
+- Aca se puede ver el plan:
   - `run_all.sh`:
     1. `terraform destroy` en módulos temporales (si existen) para limpiar estados previos.
     2. Ejecutar unit tests (uso de `terraform console` y validadores locales).
