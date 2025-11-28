@@ -1,0 +1,8 @@
+bianca007@MSI:/mnt/c/Users/Bianca/Documents/Laboratorio10$ docker logs -f ejemplo_bianca_merchan_torres
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+2025-11-22 13:16:32,244 - INFO - microservice - Arrancando la aplicación
+2025-11-22 13:16:32,244 - INFO - microservice - Inicializando base de datos en app.db
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+172.17.0.1:45834 - "GET /api/items/ HTTP/1.1" 200 OK
