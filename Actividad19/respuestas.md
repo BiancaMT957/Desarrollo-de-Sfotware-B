@@ -174,7 +174,7 @@ Pruebas con pytest validan la funcionalidad base y del contenedor.
 
 ---
 
-# 🚀 Bloque 3 – Desarrollo y Despliegue (Bonus Opcional)
+#  Bloque 3 – Desarrollo y Despliegue (Bonus Opcional)
 
 ## 1. Docker Compose – teoría
 
