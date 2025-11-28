@@ -89,7 +89,7 @@ Conjunto de microservicios que cooperan mediante:
 
 ###  Tamaño del microservicio
 **Regla:**  
-➡ *Una capacidad de negocio por servicio*.  
+ *Una capacidad de negocio por servicio*.  
 (Evitar dogmas como “una tabla por servicio”.)
 
 ---
