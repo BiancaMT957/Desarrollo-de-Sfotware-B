@@ -1,0 +1,72 @@
+bianca007@MSI:/mnt/c/Users/Bianca/Documents/Laboratorio10$ docker build -t ejemplo-microservice:0.1.0 .
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+Install the buildx component to build images with BuildKit:
+https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon 50.18kB
+Step 1/16 : FROM python:3.12-slim AS builder
+ ---> 87760eb43bfd
+Step 2/16 : ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
+ ---> Using cache
+ ---> 62b5829c530e
+Step 3/16 : WORKDIR /build
+ ---> Using cache
+ ---> e81235aade4c
+Step 4/16 : COPY requirements.txt .
+ ---> d602b0a65e9c
+Step 5/16 : RUN pip install --user --no-cache-dir -r requirements.txt
+ ---> Running in aa96da053855
+Collecting fastapi~=0.110.0 (from -r requirements.txt (line 2))
+Downloading httptools-0.7.1-cp312-cp312-manylinux1_x86_64.whl (517 kB)
+Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+Downloading python_dotenv-1.2.1-py3-none-any.whl (21 kB)
+Downloading pyaaml-6.0.3-cp312-cp312-manylinux2014_x86_64.whl (807 kB)
+807.9/807.9 kB 2.6 MB/s eta 0:00:00
+Downloading starlette-0.36.3-py3-none-any.whl (71 kB)
+Downloading anyio-4.11.0-py3-none-any.whl (109 kB)
+Downloading idna-3.11-py3-none-any.whl (71 kB)
+Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Downloading uvloop-0.22.1-cp312-cp312-manylinux2014_x86_64.whl (4.4 MB)
+4.4/4.4 MB 3.0 MB/s eta 0:00:00
+Downloading watchfiles-1.1.1-cp312-cp312-manylinux2014_x86_64.whl (456 kB)
+Downloading websockets-15.0.1-cp312-cp312-manylinux1_x86_64.whl (182 kB)
+Downloading certifi-2025.11.12-py3-none-any.whl (159 kB)
+Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+Downloading packaging-25.0-py3-none-any.whl (66 kB)
+Installing collected packages: websockets, uvloop, typing-extensions, sniffio, pyaaml, python-dotenv,
+Step 6/16 : FROM python:3.12-slim AS production
+ ---> eda12cb902a7
+Step 7/16 : ARG APP_USER=appuser
+ ---> 87760eb43bfd
+Step 8/16 : RUN groupadd -r ${APP_USER} && useradd -m -r -g ${APP_USER} ${APP_USER}
+ ---> Using cache
+ ---> c18f4db037f3
+Step 9/16 : ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PATH="/home/${APP_USER}/.local/bin:${PATH}"
+ ---> Using cache
+ ---> c942398cbf9b
+Step 10/16 : WORKDIR /app
+ ---> Using cache
+ ---> 57604b72354
+Step 11/16 : COPY --from=builder /root/.local /home/${APP_USER}/.local
+ ---> 2781968b6d38
+Step 12/16 : COPY . /app
+ ---> 3fed4d110b6c
+Step 13/16 : RUN chown -R ${APP_USER}:${APP_USER} /app
+ ---> Running in bd8f48fc1147
+ ---> Removed intermediate container bd8f48fc1147
+ ---> b5905738052a
+Step 14/16 : USER ${APP_USER}
+ ---> Running in f87e3c4a8b6b
+ ---> Removed intermediate container f87e3c4a8b6b
+ ---> ba73c3b8fb1b
+Step 15/16 : EXPOSE 80
+ ---> Running in e10cdd56382b
+ ---> Removed intermediate container e10cdd56382b
+ ---> 1c81ebb178dd
+Step 16/16 : CMD ["uvicorn", "microservice.main:app", "--host", "0.0.0.0", "--port", "80"]
+ ---> Running in ef5060108f17
+ ---> Removed intermediate container ef5060108f17
+ ---> 6dcab47fff6fd
+Successfully built 6dcab47fff6fd
+Successfully tagged ejemplo-microservice:0.1.0
