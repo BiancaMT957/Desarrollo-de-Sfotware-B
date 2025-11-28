@@ -166,7 +166,7 @@ Esto valida que:
 
 ---
 
-## 📝 Conclusiones del Bloque 2
+## Conclusiones del Bloque 2
 Docker garantiza aislamiento, portabilidad y consistencia.  
 SQLite simplifica el desarrollo inicial.  
 SemVer reemplaza `latest` para manejo profesional de versiones.  
