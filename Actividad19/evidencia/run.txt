@@ -1,0 +1,2 @@
+bianca007@MSI:/mnt/c/Users/Bianca/Documents/Laboratorio10$ docker run -d --name ejemplo_bianca_merchan_torres -p 80:80 ejemplo-microservice:0.1.0
+bb1f58db8537365c2b5fa18d012a58c773fe59ede4344c14b5d80903d6cd22e5
