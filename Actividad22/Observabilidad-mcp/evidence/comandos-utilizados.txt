@@ -1,0 +1,110 @@
+bianca007@MSI:/mnt/c/Users/Bianca/Documents/Observabilidad-mcp$ docker --version
+Docker version 27.5.1, build 27.5.1-0ubuntu3~24.04.2
+bianca007@MSI:/mnt/c/Users/Bianca/Documents/Observabilidad-mcp$ docker-compose --version
+docker-compose version 1.29.2, build unknown
+bianca007@MSI:/mnt/c/Users/Bianca/Documents/Observabilidad-mcp$ python3 --version
+Python 3.12.3
+bianca007@MSI:/mnt/c/Users/Bianca/Documents/Observabilidad-mcp$ make --version
+GNU Make 4.3
+Built for x86_64-pc-linux-gnu
+Copyright (C) 1988-2020 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+
+(bdd) bianca007@MSI:/mnt/c/Users/Bianca/Documents/Observabilidad-mcp$ docker-compose up -d
+Creating network "observabilidad-mcp_default" with the default driver
+Creating volume "observabilidad-mcp_app_logs" with default driver
+Pulling otel-collector (otel/opentelemetry-collector-contrib:0.93.0)...
+0.93.0: Pulling from otel/opentelemetry-collector-contrib
+d242e292d771: Pull complete
+b1b97b150dd7: Pull complete
+4060bb1db481: Pull complete
+....
+Creating tempo          ... done
+Creating loki           ... done
+Creating otel-collector ... done
+Creating promtail       ... done
+Creating prometheus     ... done
+Creating demo-app       ... done
+Creating grafana        ... done
+Creating mcp-server     ... done
+(bdd) bianca007@MSI:/mnt/c/Users/Bianca/Documents/Observabilidad-mcp$ docker ps --format 'table {{.
+Names}}\t{{.Image}}\t{{.Status}}'
+NAMES             IMAGE                                                    STATUS
+grafana           grafana/grafana:10.3.0                                   Up 2 minutes
+mcp-server        devsecops-observability-mcp:local                        Up 2 minutes
+demo-app          devsecops-observability-demo-app:local                   Up 2 minutes
+prometheus        prom/prometheus:latest                                   Up 2 minutes
+promtail          grafana/promtail:2.9.0                                   Up 2 minutes
+loki              grafana/loki:2.9.0                                       Up 2 minutes
+otel-collector    otel/opentelemetry-collector-contrib:0.93.0              Up 2 minutes
+tempo             grafana/tempo:2.5.0                                      Up 2 minutes
+historyserver     bde2020/hadoop-historyserver:2.0.0-hadoop3.2.1-java8     Up 34 minutes (healthy) 
+nodemanager       bde2020/hadoop-nodemanager:2.0.0-hadoop3.2.1-java8       Up 34 minutes (healthy) 
+namenode          bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8          Up 34 minutes (healthy) 
+resourcemanager   bde2020/hadoop-resourcemanager:2.0.0-hadoop3.2.1-java8   Up 33 minutes (healthy) 
+datanode          bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8          Up 34 minutes (healthy) 
+(bdd) bianca007@MSI:/mnt/c/Users/Bianca/Documents/Observabilidad-mcp$docker-compose logs --tail 20
+
+
+
+
+docker compose up -d
+docker ps
+./scripts/demo-traffic.sh
+up
+rate(http_requests_total[1m])
+
+
+
+
+
+(bdd) bianca007@MSI:/mnt/c/Users/Bianca/Documents/Observabilidad-mcp$ docker ps
+CONTAINER ID   IMAGE                                                    COMMAND                  CREATED          STATUS                       PORTS                                                                                                             NAMES
+9ae6652eccec   grafana/grafana:10.3.0                                   "/run.sh"                45 minutes ago   Up 45 minutes                0.0.0.0:3000->3000/tcp, :::3000->3000/tcp                                                                         grafana
+deb8e1b8b6aa   devsecops-observability-mcp:local                        "uvicorn main:app --…"   45 minutes ago   Up 45 minutes                0.0.0.0:8080->8080/tcp, :::8080->8080/tcp                                                                         mcp-server
+b674a8ca36de   devsecops-observability-demo-app:local                   "uvicorn main:app --…"   45 minutes ago   Up 45 minutes                0.0.0.0:8000->8000/tcp, :::8000->8000/tcp                                                                         demo-app
+22833c218833   prom/prometheus:latest                                   "/bin/prometheus --c…"   45 minutes ago   Up 45 minutes                0.0.0.0:9090->9090/tcp, :::9090->9090/tcp                                                                         prometheus
+f73759c2e12e   grafana/promtail:2.9.0                                   "/usr/bin/promtail -…"   45 minutes ago   Up 45 minutes                                                                       
+                                                           promtail
+373c4e8a2e86   grafana/loki:2.9.0                                       "/usr/bin/loki -conf…"   45 minutes ago   Up 45 minutes                0.0.0.0:3100->3100/tcp, :::3100->3100/tcp                                                                         loki
+318d904d4538   otel/opentelemetry-collector-contrib:0.93.0              "/otelcol-contrib --…"   45 minutes ago   Up 45 minutes                0.0.0.0:4318->4318/tcp, :::4318->4318/tcp, 4317/tcp, 55678-55679/tcp, 0.0.0.0:8889->8889/tcp, :::8889->8889/tcp   otel-collector
+a1106380fae5   grafana/tempo:2.5.0                                      "/tempo -config.file…"   45 minutes ago   Up 45 minutes                0.0.0.0:3200->3200/tcp, :::3200->3200/tcp, 0.0.0.0:4317->4317/tcp, :::4317->4317/tcp                              tempo
+373c4e8a2e86   grafana/loki:2.9.0                                       "/usr/bin/loki -conf…"   45 minutes ago   Up 45 minutes                0.0.0.0:3100->3100/tcp, :::3100->3100/tcp                                                                         loki
+318d904d4538   otel/opentelemetry-collector-contrib:0.93.0              "/otelcol-contrib --…"   45 minutes ago   Up 45 minutes                0.0.0.0:4318->4318/tcp, :::4318->4318/tcp, 4317/tcp, 55678-55679/tcp, 0.0.0.0:8889->8889/tcp, :::8889->8889/tcp   otel-collector
+a1106380fae5   grafana/tempo:2.5.0                                      "/tempo -config.file…"   45 minutes ago   Up 45 minutes                0.0.0.0:3200->3200/tcp, :::3200->3200/tcp, 0.0.0.0:4317->4317/tcp, :::4317->4317/tcp                              tempo
+a749062d9737   bde2020/hadoop-historyserver:2.0.0-hadoop3.2.1-java8     "/entrypoint.sh /run…"   6 months ago     Up About an hour (healthy)   8188/tcp                                                                                                          historyserver
+c3e92b8bc45b   bde2020/hadoop-nodemanager:2.0.0-hadoop3.2.1-java8       "/entrypoint.sh /run…"   6 373c4e8a2e86   grafana/loki:2.9.0                                       "/usr/bin/loki -conf…"   45 minutes ago   Up 45 minutes                0.0.0.0:3100->3100/tcp, :::3100->3100/tcp                                                                         loki
+318d904d4538   otel/opentelemetry-collector-contrib:0.93.0              "/otelcol-contrib --…"   45 minutes ago   Up 45 minutes                0.0.0.0:4318->4318/tcp, :::4318->4318/tcp, 4317/tcp, 55678-55679/tcp, 0.0.0.0:8889->8889/tcp, :::8889->8889/tcp   otel-collector
+a1106380fae5   grafana/tempo:2.5.0                                      "/tempo -config.file…"   45 minutes ago   Up 45 minutes                0.0.0.0:3200->3200/tcp, :::3200->3200/tcp, 0.0.0.0:4317->4317/tcp, :::4317->4317/tcp                              tempo
+a749062d9737   bde2020/hadoop-historyserver:2.0.0-hadoop3.2.1-java8     "/entrypoint.sh /run…"   6 months ago     Up About an hour (healthy)   8188/tcp                                                minutes ago   Up 45 minutes                0.0.0.0:3100->3100/tcp, :::3100->3100/tcp                                                                         loki
+318d904d4538   otel/opentelemetry-collector-contrib:0.93.0              "/otelcol-contrib --…"   45 minutes ago   Up 45 minutes                0.0.0.0:4318->4318/tcp, :::4318->4318/tcp, 4317/tcp, 55678-55679/tcp, 0.0.0.0:8889->8889/tcp, :::8889->8889/tcp   otel-collector
+a1106380fae5   grafana/tempo:2.5.0                                      "/tempo -config.file…"   45 minutes ago   Up 45 minutes                0.0.0.0:3200->3200/tcp, :::3200->3200/tcp, 0.0.0.0:4317->4317/tcp, :::4317->4317/tcp                              tempo
+ minutes ago   Up 45 minutes                0.0.0.0:4318->4318/tcp, :::4318->4318/tcp, 4317/tcp, 55678-55679/tcp, 0.0.0.0:8889->8889/tcp, :::8889->8889/tcp   otel-collector
+a1106380fae5   grafana/tempo:2.5.0                                      "/tempo -config.file…"   45 minutes ago   Up 45 minutes                0.0.0.0:3200->3200/tcp, :::3200->3200/tcp, 0.0.0.0:4317->4317/tcp, :::4317->4317/tcp                              tempo
+ minutes ago   Up 45 minutes                0.0.0.0:3200->3200/tcp, :::3200->3200/tcp, 0.0.0.0:4317->4317/tcp, :::4317->4317/tcp                              tempo
+->4317/tcp, :::4317->4317/tcp                              tempo
+a749062d9737   bde2020/hadoop-historyserver:2.0.0-hadoop3.2.1-java8     "/entrypoint.sh /run…"   6 months ago     Up About an hour (healthy)   8188/tcp                                                                                                          historyserver
+c3e92b8bc45b   bde2020/hadoop-nodemanager:2.0.0-hadoop3.2.1-java8       "/entrypoint.sh /run…"   6 months ago     Up About an hour (healthy)   8042/tcp                                                                                                          nodemanager
+36fb88e614f1   bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8          "/entrypoint.sh /run…"   6 months ago     Up About an hour (healthy)   0.0.0.0:9000->9000/tcp, :::9000->9000/tcp, 0.0.0.0:9870->9870/tcp, :::9870->9870/tcp                              namenode
+f176ab67746a   bde2020/hadoop-resourcemanager:2.0.0-hadoop3.2.1-java8   "/entrypoint.sh /run…"   6 months ago     Up About an hour (healthy)   8088/tcp                                               c3e92b8bc45b   bde2020/hadoop-nodemanager:2.0.0-hadoop3.2.1-java8       "/entrypoint.sh /run…"   6 months ago     Up About an hour (healthy)   8042/tcp                                                                                                          nodemanager
+36fb88e614f1   bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8          "/entrypoint.sh /run…"   6 months ago     Up About an hour (healthy)   0.0.0.0:9000->9000/tcp, :::9000->9000/tcp, 0.0.0.0:9870->9870/tcp, :::9870->9870/tcp                              namenode
+f176ab67746a   bde2020/hadoop-resourcemanager:2.0.0-hadoop3.2.1-java8   "/entrypoint.sh /run…"   6 months ago     Up About an hour (healthy)   8088/tcp                                               months ago     Up About an hour (healthy)   8042/tcp                                                                                                          nodemanager
+36fb88e614f1   bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8          "/entrypoint.sh /run…"   6 months ago     Up About an hour (healthy)   0.0.0.0:9000->9000/tcp, :::9000->9000/tcp, 0.0.0.0:9870->9870/tcp, :::9870->9870/tcp                              namenode
+f176ab67746a   bde2020/hadoop-resourcemanager:2.0.0-hadoop3.2.1-java8   "/entrypoint.sh /run…"   6 months ago     Up About an hour (healthy)   8088/tcp                                                                                                          nodemanager
+36fb88e614f1   bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8          "/entrypoint.sh /run…"   6 months ago     Up About an hour (healthy)   0.0.0.0:9000->9000/tcp, :::9000->9000/tcp, 0.0.0.0:9870->9870/tcp, :::9870->9870/tcp                              namenode
+f176ab67746a   bde2020/hadoop-resourcemanager:2.0.0-hadoop3.2.1-java8   "/entrypoint.sh /run…"   6 months ago     Up About an hour (healthy)   8088/tcp                                               36fb88e614f1   bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8          "/entrypoint.sh /run…"   6 months ago     Up About an hour (healthy)   0.0.0.0:9000->9000/tcp, :::9000->9000/tcp, 0.0.0.0:9870->9870/tcp, :::9870->9870/tcp                              namenode
+f176ab67746a   bde2020/hadoop-resourcemanager:2.0.0-hadoop3.2.1-java8   "/entrypoint.sh /run…"   6 months ago     Up About an hour (healthy)   8088/tcp                                               months ago     Up About an hour (healthy)   0.0.0.0:9000->9000/tcp, :::9000->9000/tcp, 0.0.0.0:9870->9870/tcp, :::9870->9870/tcp                              namenode
+f176ab67746a   bde2020/hadoop-resourcemanager:2.0.0-hadoop3.2.1-java8   "/entrypoint.sh /run…"   6 months ago     Up About an hour (healthy)   8088/tcp                                               ->9870/tcp, :::9870->9870/tcp                              namenode
+f176ab67746a   bde2020/hadoop-resourcemanager:2.0.0-hadoop3.2.1-java8   "/entrypoint.sh /run…"   6 months ago     Up About an hour (healthy)   8088/tcp                                               f176ab67746a   bde2020/hadoop-resourcemanager:2.0.0-hadoop3.2.1-java8   "/entrypoint.sh /run…"   6 months ago     Up About an hour (healthy)   8088/tcp                                                                                                          resourcemanager
+months ago     Up About an hour (healthy)   8088/tcp                                                                                                          resourcemanager
+                                                           resourcemanager
+4cbf2f912c69   bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8          "/entrypoint.sh /run…"   6 4cbf2f912c69   bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8          "/entrypoint.sh /run…"   6 months ago     Up About an hour (healthy)   9864/tcp                                                                                                          datanode
+(bdd) bianca007@MSI:/mnt/c/Users/Bianca/Documents/Observabilidad-mcp$
+
+
+months ago     Up About an hour (healthy)   9864/tcp                                                                                                          datanode
+(bdd) bianca007@MSI:/mnt/c/Users/Bianca/Documents/Observabilidad-mcp$
+

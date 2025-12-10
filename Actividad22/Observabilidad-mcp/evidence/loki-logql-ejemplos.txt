@@ -1,0 +1,56 @@
+(bdd) bianca007@MSI:/mnt/c/Users/Bianca/Documents/Observabilidad-mcp$ docker-compose logs --tail 20
+0 app
+Attaching to demo-app
+demo-app          | 2025-12-10 15:14:27,071 ERROR Simulated error endpoint called
+demo-app          | INFO:     172.19.0.1:50184 - "GET /api/v1/error HTTP/1.1" 500 Internal Server Error
+demo-app          | 2025-12-10 15:14:27,596 INFO Health check OK
+demo-app          | INFO:     172.19.0.1:50188 - "GET /healthz HTTP/1.1" 200 OK
+demo-app          | 2025-12-10 15:14:27,616 INFO Listing items
+demo-app          | INFO:     172.19.0.1:50204 - "GET /api/v1/items HTTP/1.1" 200 OK
+demo-app          | 2025-12-10 15:14:28,341 INFO Health check OK
+demo-app          | INFO:     172.19.0.1:50212 - "GET /healthz HTTP/1.1" 200 OK
+demo-app          | 2025-12-10 15:14:28,365 INFO Listing items
+demo-app          | INFO:     172.19.0.1:50226 - "GET /api/v1/items HTTP/1.1" 200 OK
+demo-app          | 2025-12-10 15:14:29,057 INFO Health check OK
+demo-app          | INFO:     172.19.0.1:37584 - "GET /healthz HTTP/1.1" 200 OK
+demo-app          | 2025-12-10 15:14:29,079 INFO Listing items
+demo-app          | INFO:     172.19.0.1:37592 - "GET /api/v1/items HTTP/1.1" 200 OK
+demo-app          | 2025-12-10 15:14:29,762 INFO Health check OK
+demo-app          | INFO:     172.19.0.1:37606 - "GET /healthz HTTP/1.1" 200 OK
+demo-app          | 2025-12-10 15:14:29,785 INFO Listing items
+demo-app          | INFO:     172.19.0.1:37618 - "GET /api/v1/items HTTP/1.1" 200 OK
+demo-app          | 2025-12-10 15:14:30,486 INFO Health check OK
+demo-app          | INFO:     172.19.0.1:37628 - "GET /healthz HTTP/1.1" 200 OK
+demo-app          | 2025-12-10 15:14:30,510 INFO Listing items
+demo-app          | INFO:     172.19.0.1:37636 - "GET /api/v1/items HTTP/1.1" 200 OK
+demo-app          | 2025-12-10 15:14:30,606 INFO Simulating CPU bound work
+demo-app          | 2025-12-10 15:14:30,615 WARNING Slow request simulated
+demo-app          | INFO:     172.19.0.1:37650 - "GET /api/v1/work HTTP/1.1" 200 OK
+demo-app          | 2025-12-10 15:14:31,138 ERROR Simulated error endpoint called
+demo-app          | INFO:     172.19.0.1:37652 - "GET /api/v1/error HTTP/1.1" 500 Internal Server Error
+demo-app          | INFO:     172.19.0.1:33116 - "GET / HTTP/1.1" 404 Not Found
+demo-app          | INFO:     172.19.0.1:33116 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+demo-app          | INFO:     172.19.0.1:33116 - "GET / HTTP/1.1" 404 Not Found
+demo-app          | 2025-12-10 15:14:47,376 INFO Health check OK
+demo-app          | INFO:     172.19.0.1:33128 - "GET /healthz HTTP/1.1" 200 OK
+demo-app          | 2025-12-10 15:14:47,398 INFO Listing items
+demo-app          | INFO:     172.19.0.1:33144 - "GET /api/v1/items HTTP/1.1" 200 OK
+demo-app          | 2025-12-10 15:14:48,084 INFO Health check OK
+demo-app          | INFO:     172.19.0.1:33148 - "GET /healthz HTTP/1.1" 200 OK
+demo-app          | 2025-12-10 15:14:48,104 INFO Listing items
+demo-app          | INFO:     172.19.0.1:33156 - "GET /api/v1/items HTTP/1.1" 200 OK
+demo-app          | 2025-12-10 15:14:48,749 INFO Health check OK
+demo-app          | INFO:     172.19.0.1:33168 - "GET /healthz HTTP/1.1" 200 OK
+demo-app          | 2025-12-10 15:14:48,771 INFO Listing items
+demo-app          | INFO:     172.19.0.1:56196 - "GET /api/v1/items HTTP/1.1" 200 OK
+demo-app          | 2025-12-10 15:14:49,395 INFO Health check OK
+demo-app          | INFO:     172.19.0.1:56198 - "GET /healthz HTTP/1.1" 200 OK
+demo-app          | 2025-12-10 15:14:49,415 INFO Listing items
+demo-app          | INFO:     172.19.0.1:56210 - "GET /api/v1/items HTTP/1.1" 200 OK
+demo-app          | 2025-12-10 15:14:49,968 INFO Health check OK
+demo-app          | INFO:     172.19.0.1:56214 - "GET /healthz HTTP/1.1" 200 OK
+demo-app          | 2025-12-10 15:14:49,989 INFO Listing items
+demo-app          | INFO:     172.19.0.1:56222 - "GET /api/v1/items HTTP/1.1" 200 OK
+demo-app          | 2025-12-10 15:14:50,096 INFO Simulating CPU bound work
+demo-app          | INFO:     172.19.0.1:56234 - "GET /api/v1/work HTTP/1.1" 200 OK
+demo-app          | 2025-12-10 15:14:50,126 ERROR Simulated error endpoint called
